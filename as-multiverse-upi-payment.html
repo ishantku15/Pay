@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support AS Multiverse</title>
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+      padding:24px; font-family:Arial,Helvetica,sans-serif;
+      background:linear-gradient(135deg,#101827,#25134f);
+      color:#fff;
+    }
+    .card{
+      width:100%; max-width:430px; padding:30px 24px; text-align:center;
+      border:1px solid rgba(255,255,255,.14); border-radius:24px;
+      background:rgba(255,255,255,.08); backdrop-filter:blur(14px);
+      box-shadow:0 20px 60px rgba(0,0,0,.35);
+    }
+    .logo{
+      width:82px;height:82px;border-radius:22px;object-fit:cover;margin-bottom:14px;
+    }
+    h1{margin:0 0 10px;font-size:27px}
+    p{color:#cbd5e1;line-height:1.55;margin:10px 0 22px}
+    .upi{
+      background:rgba(0,0,0,.2);border-radius:14px;padding:13px;margin:16px 0 20px;
+      font-size:16px;word-break:break-all;
+    }
+    .btn{
+      display:block;width:100%;padding:16px;border-radius:14px;border:0;
+      background:#6d4aff;color:#fff;font-size:17px;font-weight:700;
+      text-decoration:none;cursor:pointer;margin:10px 0;
+    }
+    .secondary{background:rgba(255,255,255,.12)}
+    small{color:#94a3b8}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div style="font-size:52px">🖥️🚀</div>
+    <h1>Support AS Multiverse</h1>
+    <p>
+      Help us build our own server so our websites and apps can run
+      faster, smoother and more reliably. 💙
+    </p>
+
+    <div class="upi">
+      <strong>UPI ID</strong><br>
+      ishantkr@fam
+    </div>
+
+    <a class="btn" id="payBtn" href="upi://pay?pa=ishantkr%40fam&pn=AS%20Multiverse&cu=INR">
+      💳 Pay via UPI
+    </a>
+
+    <button class="btn secondary" onclick="copyUPI()">
+      📋 Copy UPI ID
+    </button>
+
+    <small>Tap “Pay via UPI” to open a compatible UPI app.</small>
+  </main>
+
+  <script>
+    function copyUPI(){
+      navigator.clipboard.writeText("ishantkr@fam")
+        .then(()=>alert("UPI ID copied: ishantkr@fam"))
+        .catch(()=>alert("UPI ID: ishantkr@fam"));
+    }
+  </script>
+</body>
+</html>
